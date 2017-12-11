@@ -4,13 +4,63 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
 	template="/WEB-INF/templates/Layout.xhtml">
-	
+
 	<ui:define name="content">
-		<h1 class="aw-page-title">Título da sua página</h1>
-		
+		<h1 class="aw-page-title">Cadastro de Contrato</h1>
+
 		<h:form id="frm">
-			Conteúdo do formulário
+
+			<p:toolbar>
+				<p:toolbarGroup>
+					<p:commandButton value="Salvar" />
+				</p:toolbarGroup>
+				<p:toolbarGroup align="right">
+
+					<p:button value="Pesquisa" />
+				</p:toolbarGroup>
+			</p:toolbar>
+
+			<div class="ui-fluid">
+				<p:panelGrid columns="4" layout="grid"
+					columnClasses="ui-grid-col-2, ui-grid-col-4, ui-grid-col-2, ui-grid-col-4"
+					styleClass="panelgrid-noborder">
+					<p:outputLabel value="Número do Contrato:" for="numero_contrato" />
+					<p:inputText id="numero_contrato" required="true" />
+
+					<p:outputLabel value="Valor do Contrato:" for="val_contrato" />
+					<p:inputText id="val_contrato" required="true" />
+
+					<p:outputLabel value="Empresa:" for="empresa" />
+					<p:inputText id="empresa" required="true" />
+					<h:outputText value="" />
+					<h:outputText value="" />
+
+					<p:outputLabel value="Gestor:" for="gestor_email" />
+					<p:selectOneMenu id="gestor_email" value="" required="true"
+						requiredMessage="Email do gestor é obrigatório!">
+						<f:selectItem itemLabel="Selecione um gestor"></f:selectItem>
+
+					</p:selectOneMenu>
+					<p:outputLabel value="Funcionário:" for="func_email" />
+					<p:selectOneMenu id="func_email" value="">
+						<f:selectItem itemLabel="Selecione um funcionário"></f:selectItem>
+
+					</p:selectOneMenu>
+
+					<p:outputLabel for="inicio" value="Data início:" />
+					<p:calendar id="inicio"  mode="inline" />
+
+					<p:outputLabel for="fim" value="Data fim:" />
+					<p:calendar id="fim" mode="inline" />
+
+					<p:outputLabel value="Objetivo:" for="obj" />
+					<p:inputTextarea id="obj" value="" />
+
+
+
+				</p:panelGrid>
+			</div>
 		</h:form>
 	</ui:define>
-	
+
 </ui:composition>
