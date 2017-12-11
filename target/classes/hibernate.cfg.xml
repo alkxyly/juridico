@@ -17,6 +17,7 @@
 		<property name="hbm2ddl.auto">update</property>
 
 		<mapping class="br.com.sergipetec.model.Contrato" />
+		<mapping class="br.com.sergipetec.model.Usuario" />
 		
 
 	</session-factory>
