@@ -28,7 +28,9 @@
 					<p:inputText id="numero_contrato" required="true" />
 
 					<p:outputLabel value="Valor do Contrato:" for="val_contrato" />
-					<p:inputText id="val_contrato" required="true" />
+					 <p:inputNumber id="val_contrato" value="" symbol=" R$" symbolPosition="s" 
+                               decimalSeparator="," thousandSeparator=".">  
+                </p:inputNumber> 
 
 					<p:outputLabel value="Empresa:" for="empresa" />
 					<p:inputText id="empresa" required="true" />
