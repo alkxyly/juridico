@@ -8,12 +8,13 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-
+@WebFilter(urlPatterns = {"*.jsf"})
 public class ConexaoHibernateFilter implements Filter {
 	private SessionFactory sf;
 	@Override

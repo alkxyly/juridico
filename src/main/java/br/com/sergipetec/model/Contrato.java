@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_contrato")
 public class Contrato {
+	
 	@Id
 	@GeneratedValue
 	private Integer id;
@@ -20,7 +21,7 @@ public class Contrato {
 	private Date dataFim;
 	private String observacao;
 	private String empresa;
-	private Usuario usuario;
+//	private Usuario usuario;
 	
 	public void Contrato(){
 		
@@ -69,12 +70,12 @@ public class Contrato {
 	public void setEmpresa(String empresa) {
 		this.empresa = empresa;
 	}
-	public Usuario getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
+//	public Usuario getUsuario() {
+//		return usuario;
+//	}
+//	public void setUsuario(Usuario usuario) {
+//		this.usuario = usuario;
+//	}
 	
 	
 	
