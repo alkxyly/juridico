@@ -6,7 +6,7 @@
 	template="/WEB-INF/templates/Layout.xhtml">
 
 	<ui:define name="content">
-		<h1 class="aw-page-title">Cadastro de Gestor/Funcionário</h1>
+		<h1 class="aw-page-title">Cadastro de Funcionário</h1>
 
 		<h:form id="frm">
 			<p:messages />
@@ -29,8 +29,19 @@
 						for="nome_gestor_funcionario" />
 					<p:inputText id="nome_gestor_funcionario" value="" required="true" />
 
+					
+
 					<p:outputLabel value="Email:" for="email_gestor_funcionario" />
 					<p:inputText id="email_gestor_funcionario" value="" required="true" />
+
+					
+
+					<p:outputLabel value="Categoria:" for="categoria" />
+					<p:selectOneMenu id="categoria" value="">
+						<f:selectItem itemLabel="Selecione uma categoria"></f:selectItem>
+						<f:selectItem itemLabel="Gestor"></f:selectItem>
+						<f:selectItem itemLabel="Funcionário"></f:selectItem>
+					</p:selectOneMenu>
 				</p:panelGrid>
 			</div>
 		</h:form>
