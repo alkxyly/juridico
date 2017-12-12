@@ -13,7 +13,7 @@
 			<p:toolbar>
 				<p:toolbarGroup>
 					<p:commandButton value="Salvar"
-						actionListener="#{contratoBean.salvar}" ajax="false" />
+						actionListener="#{funcionarioBean.salvar}" ajax="false" />
 				</p:toolbarGroup>
 				<p:toolbarGroup align="right">
 
@@ -27,20 +27,27 @@
 					styleClass="panelgrid-noborder">
 					<p:outputLabel value="Nome do Gestor/Funcionário:"
 						for="nome_gestor_funcionario" />
-					<p:inputText id="nome_gestor_funcionario" value="" required="true" />
+					<p:inputText id="nome_gestor_funcionario"
+						value="#{funcionarioBean.funcionario.nome}" required="true" />
 
-					
+
 
 					<p:outputLabel value="Email:" for="email_gestor_funcionario" />
-					<p:inputText id="email_gestor_funcionario" value="" required="true" />
+					<p:inputText id="email_gestor_funcionario"
+						value="#{funcionarioBean.funcionario.email}" required="true"
+						requiredMessage="Email Obrigatório."
+						validatorMessage="Email inválido.">
+						<f:validateRegex pattern="[a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9\-\_\.]+"></f:validateRegex>
+					</p:inputText>
 
-					
+
 
 					<p:outputLabel value="Categoria:" for="categoria" />
-					<p:selectOneMenu id="categoria" value="">
+					<p:selectOneMenu id="categoria"
+						value="#{funcionarioBean.funcionario.categoria}">
+						<f:selectItem itemLabel="Gestor" itemValue="Gestor"></f:selectItem>
+						<f:selectItem itemLabel="Funcionário" itemValue="Funcionario"></f:selectItem>
 						<f:selectItem itemLabel="Selecione uma categoria"></f:selectItem>
-						<f:selectItem itemLabel="Gestor"></f:selectItem>
-						<f:selectItem itemLabel="Funcionário"></f:selectItem>
 					</p:selectOneMenu>
 				</p:panelGrid>
 			</div>
