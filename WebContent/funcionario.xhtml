@@ -12,8 +12,8 @@
 			<p:messages closable="true" showIcon="false" style="font-size:small;"></p:messages>
 			<p:toolbar>
 				<p:toolbarGroup>
-					<p:commandButton value="Cadastrar"
-						actionListener="#{funcionarioBean.novo}" ajax="false" />
+					<p:commandButton value="Salvar" action="#{funcionarioBean.salvar}"
+						ajax="false" />
 				</p:toolbarGroup>
 				<p:toolbarGroup align="right">
 
@@ -28,7 +28,8 @@
 					<p:outputLabel value="Nome do Funcionário:"
 						for="nome_gestor_funcionario" />
 					<p:inputText id="nome_gestor_funcionario"
-						value="#{funcionarioBean.funcionario.nome}" required="true" requiredMessage="Nome de funcionário obrigatório"/>
+						value="#{funcionarioBean.funcionario.nome}" required="true"
+						requiredMessage="Nome de funcionário obrigatório" />
 
 
 
