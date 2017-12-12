@@ -16,13 +16,13 @@ public class FuncionarioBean {
 	}
 	
 	public String novo(){
-		return "funcionario.jsf?faces-redirect=true";
+		return "funcionario?faces-redirect=true";
 	}
 	
 	public String salvar(){
 		FuncionarioRN funcionarioRN = new FuncionarioRN();
 		funcionarioRN.salvar(funcionario);
-		return "consultarFuncionario.jsf?faces-redirect=true";
+		return "consultarFuncionario?faces-redirect=true";
 	}
 
 	public Funcionario getFuncionario() {
