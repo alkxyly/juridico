@@ -18,6 +18,7 @@ public class ContratoBean {
 	
 	public void salvar(){
 		ContratoRN contratoRN = new ContratoRN();
+		System.out.println("Clicou");
 //		Usuario usuario =  new Usuario();
 //		usuario.setEmail("luiz@hotmail.com");
 //		usuario.setSenha("123123");

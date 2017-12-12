@@ -7,11 +7,15 @@
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 
 
-		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/juridico</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-		<property name="connection.username">postgres</property>
-		<property name="connection.password">root</property>		
+<!-- 		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/juridico</property> -->
+<!-- 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> -->
+<!-- 		<property name="connection.username">postgres</property> -->
+<!-- 		<property name="connection.password">postgres</property>		 -->
 
+		<property name="hibernate.connection.url">jdbc:postgresql://192.168.0.26:5432/juridico</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="connection.username">desenv</property>
+		<property name="connection.password">itps@@123</property>
 
 		<property name="current_session_context_class">thread</property>
 		<property name="hbm2ddl.auto">update</property>

@@ -33,6 +33,7 @@ public class Contrato implements Serializable{
 	private Date dataFim;
 	private String objeto;
 	private String empresa;
+	private String fonteRecurso;
 	
 	@ManyToOne
 	@JoinColumn(name = "cod_usuario")
@@ -100,6 +101,16 @@ public class Contrato implements Serializable{
 	}
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+
+	public String getFonteRecurso() {
+		return fonteRecurso;
+	}
+
+
+	public void setFonteRecurso(String fonteRecurso) {
+		this.fonteRecurso = fonteRecurso;
 	}
 	
 	
