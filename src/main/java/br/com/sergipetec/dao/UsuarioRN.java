@@ -12,12 +12,8 @@ private UsuarioDAO usuarioDAO;
 		this.usuarioDAO = DAOFactory.criarUsuarioDAO();
 	}
 	
-	public Usuario buscarLogin(String email, String senha) {
-		Usuario usuario =  new Usuario();
-		usuario.setEmail("luiz@gmail.com");
-		usuario.setSenha("123123");
-		usuario.setId(1);
-		return usuario;
+	public Usuario buscarLogin(String email, String senha) {	
+		return usuarioDAO.buscarLogin(email, senha);
 	}
 
 }
