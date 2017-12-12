@@ -20,8 +20,8 @@ public class FuncionarioBean {
 	}
 	
 	public String salvar(){
-//		FuncionarioRN funcionarioRN = new FuncionarioRN();
-//		funcionarioRN.salvar(funcionario);
+		FuncionarioRN funcionarioRN = new FuncionarioRN();
+		funcionarioRN.salvar(funcionario);
 		return "consultarFuncionario?faces-redirect=true";
 	}
 

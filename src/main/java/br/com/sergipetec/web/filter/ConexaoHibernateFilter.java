@@ -64,10 +64,10 @@ public class ConexaoHibernateFilter implements Filter {
 			// Se o usuário estiver tentando acessar alguma página dentro do diretório restrito...
 			if (uri.contains("/restrito")) {
 				// ... redirecione-o para a página de login.
-				redirect = "/login.jsfl";
+				redirect = "/juridico/login.jsf";
 			}
 		} else if (uri.endsWith("login.xhtml")) {
-			redirect = "/Contexto/restrito/principal.xhtml";
+			redirect = "/restrito/index.xhtml";
 		}
 		if (redirect != null) {
 			((HttpServletResponse) arg1).sendRedirect(redirect);

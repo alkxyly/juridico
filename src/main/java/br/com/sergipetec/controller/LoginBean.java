@@ -42,7 +42,7 @@ public class LoginBean {
 //		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", this.usuario);
 		
-		return "index.jsf?faces-redirect=true";
+		return "/restrito/index.jsf?faces-redirect=true";
 	}
 	
 	public String crypt(String senha){
@@ -68,7 +68,7 @@ public class LoginBean {
 	public String logout(){
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 		
-        return "login.jsf?faces-redirect=true";
+        return "/login.jsf?faces-redirect=true";
 	}
 	
 	public String getMensagem() {
