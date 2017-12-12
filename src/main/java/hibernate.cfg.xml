@@ -22,7 +22,7 @@
 
 		<mapping class="br.com.sergipetec.model.Contrato" />
 		<mapping class="br.com.sergipetec.model.Usuario" />
-		
+		<mapping class="br.com.sergipetec.model.Funcionario" />
 
 	</session-factory>
 </hibernate-configuration>
