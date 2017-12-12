@@ -45,7 +45,7 @@
 					<p:selectOneMenu id="gestor_email" value=""
 						converter="FuncionarioConverter">
 						<f:selectItem itemLabel="Selecione um gestor"></f:selectItem>
-						<f:selectItems value=#{contratoBean.gestores}
+						<f:selectItems value="#{contratoBean.gestores}"
 							var="gestor" itemLabel="#{gestor.nome}"
 							itemValue="#{gestor}"></f:selectItems>
 					</p:selectOneMenu>
@@ -54,7 +54,7 @@
 					<p:selectOneMenu id="func_email" value=""
 						converter="FuncionarioConverter">
 						<f:selectItem itemLabel="Selecione um funcionário"></f:selectItem>
-						<f:selectItems value=#{contratoBean.funcionarios}
+						<f:selectItems value="#{contratoBean.funcionarios}"
 							var="funcionario" itemLabel="#{funcionario.nome}"
 							itemValue="#{funcionario}"></f:selectItems>
 					</p:selectOneMenu>
