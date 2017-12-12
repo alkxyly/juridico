@@ -13,8 +13,11 @@ private UsuarioDAO usuarioDAO;
 	}
 	
 	public Usuario buscarLogin(String email, String senha) {
-		
-		return null;
+		Usuario usuario =  new Usuario();
+		usuario.setEmail("luiz@gmail.com");
+		usuario.setSenha("123123");
+		usuario.setId(1);
+		return usuario;
 	}
 
 }

@@ -39,10 +39,10 @@ public class LoginBean {
 			return "?faces-redirect=true";
 		}
 		
-		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+//		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", this.usuario);
 		
-		return "dashboard?faces-redirect=true";
+		return "index.jsf?faces-redirect=true";
 	}
 	
 	public String crypt(String senha){
@@ -57,10 +57,8 @@ public class LoginBean {
 			
 			return hexString.toString();
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
