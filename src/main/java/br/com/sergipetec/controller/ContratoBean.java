@@ -45,7 +45,7 @@ public class ContratoBean {
 
 	public List<Funcionario> getFuncionarios() {
 		FuncionarioRN funcionarioRN = new FuncionarioRN();
-		this.funcionarios = null;
+		this.funcionarios = funcionarioRN.listarFuncionarios();
 		return funcionarios;
 	}
 
@@ -55,7 +55,7 @@ public class ContratoBean {
 
 	public List<Funcionario> getGestores() {
 		FuncionarioRN funcionarioRN = new FuncionarioRN();
-		this.gestores = null;
+		this.gestores = funcionarioRN.listarGestores();
 		return gestores;
 	}
 

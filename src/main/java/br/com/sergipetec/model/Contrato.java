@@ -141,8 +141,95 @@ public class Contrato implements Serializable{
 	public void setFuncionario(Funcionario funcionario) {
 		this.funcionario = funcionario;
 	}
-	
-	
-	
-	
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((dataFim == null) ? 0 : dataFim.hashCode());
+		result = prime * result
+				+ ((dataInicio == null) ? 0 : dataInicio.hashCode());
+		result = prime * result + ((empresa == null) ? 0 : empresa.hashCode());
+		result = prime * result
+				+ ((fonteRecurso == null) ? 0 : fonteRecurso.hashCode());
+		result = prime * result
+				+ ((funcionario == null) ? 0 : funcionario.hashCode());
+		result = prime * result + ((gestor == null) ? 0 : gestor.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result
+				+ ((numeroContrato == null) ? 0 : numeroContrato.hashCode());
+		result = prime * result + ((objeto == null) ? 0 : objeto.hashCode());
+		result = prime * result + ((usuario == null) ? 0 : usuario.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(valorContrato);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Contrato other = (Contrato) obj;
+		if (dataFim == null) {
+			if (other.dataFim != null)
+				return false;
+		} else if (!dataFim.equals(other.dataFim))
+			return false;
+		if (dataInicio == null) {
+			if (other.dataInicio != null)
+				return false;
+		} else if (!dataInicio.equals(other.dataInicio))
+			return false;
+		if (empresa == null) {
+			if (other.empresa != null)
+				return false;
+		} else if (!empresa.equals(other.empresa))
+			return false;
+		if (fonteRecurso == null) {
+			if (other.fonteRecurso != null)
+				return false;
+		} else if (!fonteRecurso.equals(other.fonteRecurso))
+			return false;
+		if (funcionario == null) {
+			if (other.funcionario != null)
+				return false;
+		} else if (!funcionario.equals(other.funcionario))
+			return false;
+		if (gestor == null) {
+			if (other.gestor != null)
+				return false;
+		} else if (!gestor.equals(other.gestor))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (numeroContrato == null) {
+			if (other.numeroContrato != null)
+				return false;
+		} else if (!numeroContrato.equals(other.numeroContrato))
+			return false;
+		if (objeto == null) {
+			if (other.objeto != null)
+				return false;
+		} else if (!objeto.equals(other.objeto))
+			return false;
+		if (usuario == null) {
+			if (other.usuario != null)
+				return false;
+		} else if (!usuario.equals(other.usuario))
+			return false;
+		if (Double.doubleToLongBits(valorContrato) != Double
+				.doubleToLongBits(other.valorContrato))
+			return false;
+		return true;
+	}
 }
