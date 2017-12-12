@@ -7,11 +7,12 @@
 
 	<ui:define name="content">
 		<h1 class="aw-page-title">Relação de Funcionários</h1>
-		<p:toolbarGroup>
-			<p:commandButton value="Salvar"
-				actionListener="#{funcionarioBean.salvar}" ajax="false" />
-		</p:toolbarGroup>
-
+		<h:form>
+			<p:toolbarGroup>
+				<p:commandButton value="Cadastrar"
+					actionListener="#{funcionarioBean.novo}" ajax="false" />
+			</p:toolbarGroup>
+		</h:form>
 	</ui:define>
 
 </ui:composition>
