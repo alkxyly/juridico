@@ -17,10 +17,7 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "tb_contrato")
 public class Contrato implements Serializable{
-	
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -5928138367585974122L;
 
 	@Id
@@ -42,10 +39,11 @@ public class Contrato implements Serializable{
 	private Usuario usuario;
 	
 	@OneToOne
-	@PrimaryKeyJoinColumn(name = "id")
+	@JoinColumn(name = "id_gestor")
 	private Funcionario gestor;
-	@OneToOne
-	@PrimaryKeyJoinColumn(name = "id")
+	
+	@ManyToOne
+	@JoinColumn(name = "id_funcionario")
 	private Funcionario funcionario;
 	
 	public void Contrato(){
@@ -232,4 +230,14 @@ public class Contrato implements Serializable{
 			return false;
 		return true;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Contrato [id=" + id + ", numeroContrato=" + numeroContrato + ", valorContrato=" + valorContrato
+				+ ", dataInicio=" + dataInicio + ", dataFim=" + dataFim + ", objeto=" + objeto + ", empresa=" + empresa
+				+ ", fonteRecurso=" + fonteRecurso + ", usuario=" + usuario.getEmail() + ", gestor=" + gestor.getNome() + ", funcionario="
+				+ funcionario.getEmail() + "]";
+	}
+	
 }
