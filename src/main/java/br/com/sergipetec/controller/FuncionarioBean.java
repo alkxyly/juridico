@@ -15,9 +15,10 @@ public class FuncionarioBean {
 		this.funcionario = new Funcionario();
 	}
 	
-	public void salvar(){
+	public String salvar(){
 		FuncionarioRN funcionarioRN = new FuncionarioRN();
 		funcionarioRN.salvar(funcionario);
+		return "funcionario.xhtml?faces-redirect=true";
 	}
 
 	public Funcionario getFuncionario() {

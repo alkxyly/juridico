@@ -45,9 +45,9 @@
 					<p:outputLabel value="Categoria:" for="categoria" />
 					<p:selectOneMenu id="categoria"
 						value="#{funcionarioBean.funcionario.categoria}">
+						<f:selectItem itemLabel="Selecione uma categoria"></f:selectItem>
 						<f:selectItem itemLabel="Gestor" itemValue="Gestor"></f:selectItem>
 						<f:selectItem itemLabel="Funcionário" itemValue="Funcionario"></f:selectItem>
-						<f:selectItem itemLabel="Selecione uma categoria"></f:selectItem>
 					</p:selectOneMenu>
 				</p:panelGrid>
 			</div>

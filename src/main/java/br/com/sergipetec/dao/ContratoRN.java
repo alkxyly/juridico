@@ -12,7 +12,7 @@ public class ContratoRN {
 	}
 	
 	public void salvar(Contrato contrato){
-		if(contrato == null || contrato.getId() == 0)
+		if(contrato == null || contrato.getId() == null)
 			this.contratoDAO.salvar(contrato);
 	}
 }

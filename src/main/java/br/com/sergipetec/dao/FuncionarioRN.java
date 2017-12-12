@@ -12,7 +12,7 @@ private FuncionarioDAO funcionarioDAO;
 	}
 	
 	public void salvar(Funcionario funcionario){
-		if(funcionario == null || funcionario.getId() == 0)
+		if(funcionario == null || funcionario.getId() == null)
 			this.funcionarioDAO.salvar(funcionario);
 	}
 }
