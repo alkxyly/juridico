@@ -1,6 +1,8 @@
 package br.com.sergipetec.dao;
 
 
+import java.util.List;
+
 import org.hibernate.Session;
 
 import br.com.sergipetec.model.Contrato;
@@ -28,5 +30,11 @@ public class ContratoDAOHibernate  implements ContratoDAO{
 	public void atualizar(Contrato contrato) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Contrato> listarContratos() {
+		return this.session.createCriteria(Contrato.class).list();
 	}
 }
