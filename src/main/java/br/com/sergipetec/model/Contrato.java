@@ -25,9 +25,9 @@ public class Contrato implements Serializable{
 	
 	private String numeroContrato;
 	private double valorContrato;
-	private Date dataincio;
+	private Date dataInicio;
 	private Date dataFim;
-	private String observacao;
+	private String objeto;
 	private String empresa;
 	
 	@ManyToOne
@@ -57,24 +57,34 @@ public class Contrato implements Serializable{
 	public void setValorContrato(double valorContrato) {
 		this.valorContrato = valorContrato;
 	}
-	public Date getDataincio() {
-		return dataincio;
+	
+	public Date getDataInicio() {
+		return dataInicio;
 	}
-	public void setDataincio(Date dataincio) {
-		this.dataincio = dataincio;
+
+
+	public void setDataInicio(Date dataInicio) {
+		this.dataInicio = dataInicio;
 	}
+
+
 	public Date getDataFim() {
 		return dataFim;
 	}
 	public void setDataFim(Date dataFim) {
 		this.dataFim = dataFim;
 	}
-	public String getObservacao() {
-		return observacao;
+	
+	public String getObjeto() {
+		return objeto;
 	}
-	public void setObservacao(String observacao) {
-		this.observacao = observacao;
+
+
+	public void setObjeto(String objeto) {
+		this.objeto = objeto;
 	}
+
+
 	public String getEmpresa() {
 		return empresa;
 	}
