@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -38,6 +40,13 @@ public class Contrato implements Serializable{
 	@ManyToOne
 	@JoinColumn(name = "cod_usuario")
 	private Usuario usuario;
+	
+	@OneToOne
+	@PrimaryKeyJoinColumn(name = "id")
+	private Funcionario gestor;
+	@OneToOne
+	@PrimaryKeyJoinColumn(name = "id")
+	private Funcionario funcionario;
 	
 	public void Contrato(){
 		
@@ -111,6 +120,26 @@ public class Contrato implements Serializable{
 
 	public void setFonteRecurso(String fonteRecurso) {
 		this.fonteRecurso = fonteRecurso;
+	}
+
+
+	public Funcionario getGestor() {
+		return gestor;
+	}
+
+
+	public void setGestor(Funcionario gestor) {
+		this.gestor = gestor;
+	}
+
+
+	public Funcionario getFuncionario() {
+		return funcionario;
+	}
+
+
+	public void setFuncionario(Funcionario funcionario) {
+		this.funcionario = funcionario;
 	}
 	
 	
