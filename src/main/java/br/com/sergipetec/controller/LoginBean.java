@@ -30,7 +30,7 @@ public class LoginBean {
 		
 		UsuarioRN usuarioRN = new UsuarioRN();
 		
-		Usuario usuLogin = usuarioRN.buscarLogin(this.usuario.getEmail(), crypt(this.usuario.getSenha()));
+		Usuario usuLogin = usuarioRN.buscarLogin(this.usuario.getEmail(), this.usuario.getSenha());
 
 		if(usuLogin != null){
 			this.usuario = usuLogin;
