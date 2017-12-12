@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "tb_contrato")
@@ -25,7 +27,9 @@ public class Contrato implements Serializable{
 	
 	private String numeroContrato;
 	private double valorContrato;
+	@Temporal(TemporalType.DATE )
 	private Date dataInicio;
+	@Temporal(TemporalType.DATE )
 	private Date dataFim;
 	private String objeto;
 	private String empresa;
