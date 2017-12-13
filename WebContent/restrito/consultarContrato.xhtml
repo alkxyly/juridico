@@ -19,7 +19,7 @@
 					</p:toolbarGroup>
 				</p:toolbar>
 
-				<p:dataTable id="basicDT" var="contrato" reflow="true"
+				<p:dataTable id="basicDT" var="contrato" reflow="true" emptyMessage="Sem registros de contratos."
 					value="#{pesquisarBean.contratos}">
 
 					<f:facet name="header">Lista de Contratos</f:facet>
@@ -44,8 +44,8 @@
 						</h:outputText>
 					</p:column>
 
-					<p:column headerText="Valor R$">
-						<h:outputText value="#{contrato.valorContrato}" />
+					<p:column headerText="Valor">
+						<h:outputText value="R$ #{contrato.valorContrato}" />
 					</p:column>
 
 					<p:column style="width:32px;text-align: center">
