@@ -6,7 +6,7 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
-	<title>Siscomp - Login</title>
+	<title>Jurídico - Login</title>
 </h:head>
 <h:body>
 	<h:form>
@@ -15,7 +15,7 @@
 			<p:inputText value="#{loginBean.usuario.email}"/>
 	
 			<p:outputLabel value="Senha" />
-			<p:inputText value="#{loginBean.usuario.senha}"/>
+			<p:password value="#{loginBean.usuario.senha}"/>
 			
 			<h:commandButton value="Login" action="#{loginBean.login}"/>
 		</h:panelGrid>

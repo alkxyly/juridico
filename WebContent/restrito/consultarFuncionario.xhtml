@@ -15,16 +15,16 @@
 				</p:toolbarGroup>
 			</p:toolbar>
 
-			<p:dataTable id="funcionarios" var="funcionario"
+			<p:dataTable id="funcionarios" var="funcionario" reflow="true"
 				style="margin-top:10px" value="#{funcionarioBean.listaFuncionarios}"
 				paginator="true" widgetVar="funcionariosT"
 				emptyMessage="Sem registros de funcionários."
 				currentPageReportTemplate="Mostrando {startRecord}-{endRecord} de {totalRecords} registros."
 				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 				rowsPerPageTemplate="5,10,25">
-				<f:facet name="header" >
+				<f:facet name="header">
 					<p:outputLabel value="Funcionários" />
-					<p:inputText id="globalFilter" style="float: right"
+					<p:inputText id="globalFilter" style="float:right"
 						onkeyup="PF('funcionariosT').filter()" placeholder="Pesquisar" />
 				</f:facet>
 
