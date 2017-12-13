@@ -42,7 +42,7 @@ public class LoginBean {
 //		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", this.usuario);
 		
-		return "/restrito/index.jsf?faces-redirect=true";
+		return "/restrito/contrato.jsf?faces-redirect=true";
 	}
 	
 	public String crypt(String senha){

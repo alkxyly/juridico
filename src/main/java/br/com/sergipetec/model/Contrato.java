@@ -25,7 +25,7 @@ public class Contrato implements Serializable{
 	private Integer id;
 	
 	private String numeroContrato;
-	private double valorContrato;
+	private Double valorContrato;
 	@Temporal(TemporalType.DATE )
 	private Date dataInicio;
 	@Temporal(TemporalType.DATE )
@@ -63,10 +63,10 @@ public class Contrato implements Serializable{
 	public void setNumeroContrato(String numeroContrato) {
 		this.numeroContrato = numeroContrato;
 	}
-	public double getValorContrato() {
+	public Double getValorContrato() {
 		return valorContrato;
 	}
-	public void setValorContrato(double valorContrato) {
+	public void setValorContrato(Double valorContrato) {
 		this.valorContrato = valorContrato;
 	}
 	

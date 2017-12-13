@@ -20,10 +20,6 @@ public class FuncionarioBean {
 		this.listaFuncionarios = new ArrayList<Funcionario>();
 	}
 	
-	public String novo(){
-		return "funcionario?faces-redirect=true";
-	}
-	
 	public String salvar(){
 		FuncionarioRN funcionarioRN = new FuncionarioRN();
 		funcionarioRN.salvar(funcionario);

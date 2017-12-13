@@ -6,12 +6,11 @@
 	template="/WEB-INF/templates/Layout.xhtml">
 
 	<ui:define name="content">
-		<h1 class="aw-page-title">Relação de Funcionários</h1>
+		<h1 class="aw-page-title">Relação de Colaboradores</h1>
 		<h:form>
 			<p:toolbar>
 				<p:toolbarGroup>
-					<p:commandButton value="Cadastrar" action="#{funcionarioBean.novo}"
-						ajax="false" />
+					<p:button value="Cadastrar" outcome="funcionario" />
 				</p:toolbarGroup>
 			</p:toolbar>
 
@@ -23,7 +22,7 @@
 				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
 				rowsPerPageTemplate="5,10,25">
 				<f:facet name="header">
-					<p:outputLabel value="Funcionários" />
+					<p:outputLabel value="Colaboradores" />
 					<p:inputText id="globalFilter" style="float:right"
 						onkeyup="PF('funcionariosT').filter()" placeholder="Pesquisar" />
 				</f:facet>

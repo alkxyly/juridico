@@ -6,7 +6,7 @@
 	template="/WEB-INF/templates/Layout.xhtml">
 
 	<ui:define name="content">
-		<h1 class="aw-page-title">Cadastro de Funcionário</h1>
+		<h1 class="aw-page-title">Cadastro de Colaborador</h1>
 
 		<h:form id="frm">
 			<p:messages closable="true" showIcon="false" style="font-size:small;"></p:messages>
@@ -15,17 +15,13 @@
 					<p:commandButton value="Salvar" action="#{funcionarioBean.salvar}"
 						ajax="false" />
 				</p:toolbarGroup>
-				<p:toolbarGroup align="right">
-
-					<p:button value="Pesquisa" />
-				</p:toolbarGroup>
 			</p:toolbar>
 
 			<div class="ui-fluid" style="margin-top: 10px">
 				<p:panelGrid columns="2" layout="grid"
 					columnClasses="ui-grid-col-2, ui-grid-col-4, ui-grid-col-2, ui-grid-col-4"
 					styleClass="panelgrid-noborder">
-					<p:outputLabel value="Nome do Funcionário:"
+					<p:outputLabel value="Nome do Colaborador:"
 						for="nome_gestor_funcionario" />
 					<p:inputText id="nome_gestor_funcionario"
 						value="#{funcionarioBean.funcionario.nome}" required="true"
@@ -48,7 +44,7 @@
 						value="#{funcionarioBean.funcionario.categoria}">
 						<f:selectItem itemLabel="Selecione uma categoria"></f:selectItem>
 						<f:selectItem itemLabel="Gestor" itemValue="Gestor"></f:selectItem>
-						<f:selectItem itemLabel="Funcionário" itemValue="Funcionario"></f:selectItem>
+						<f:selectItem itemLabel="Colaborador" itemValue="Colaborador"></f:selectItem>
 					</p:selectOneMenu>
 				</p:panelGrid>
 			</div>
