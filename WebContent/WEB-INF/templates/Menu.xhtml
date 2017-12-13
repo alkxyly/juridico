@@ -9,8 +9,10 @@
 				<li class="is-selected"><h:link outcome="index">
 						<i class="fa  fa-fw  fa-file-text"></i>Contrato</h:link></li>
 				<li><h:link outcome="consultarFuncionario">
-						<i class="fa  fa-fw  fa-user"></i>Funcionário</h:link></li>
-				<li><h:commandLink value=" Sair" action="#{loginBean.logout}" /></li>
+						<i class="fa  fa-fw  fa-group"></i>Funcionário</h:link></li>
+				<li><h:commandLink action="#{loginBean.logout}">
+						<i class="fa fa-fw fa-sign-out"></i>Sair
+					</h:commandLink></li>
 			</ul>
 		</nav>
 	</h:form>
