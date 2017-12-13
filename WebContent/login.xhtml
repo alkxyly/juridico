@@ -10,14 +10,14 @@
 </h:head>
 <h:body>
 	<h:form>
-		<h:panelGrid columns="2">
+		<h:panelGrid columns="1" style="margin: 0 auto;">
+			<i class="fa  fa-fw  fa-user"></i>
 			<p:outputLabel value="Login" />
-			<p:inputText value="#{loginBean.usuario.email}"/>
-	
+			<p:inputText value="#{loginBean.usuario.email}" />
+			<i class="fa  fa-fw  fa-lock"></i>
 			<p:outputLabel value="Senha" />
-			<p:password value="#{loginBean.usuario.senha}"/>
-			
-			<h:commandButton value="Login" action="#{loginBean.login}"/>
+			<p:password value="#{loginBean.usuario.senha}" />
+			<p:commandButton value="Login" action="#{loginBean.login}" />
 		</h:panelGrid>
 
 
