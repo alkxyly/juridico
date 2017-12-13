@@ -10,4 +10,5 @@ public interface FuncionarioDAO {
 	public void excluir(Funcionario funcionario);
 	public List<Funcionario> listarFuncionarios();
 	public List<Funcionario> listarGestores();
+	public List<Funcionario> listar();
 }

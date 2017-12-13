@@ -46,4 +46,9 @@ public class FuncionarioDAOHibernate implements FuncionarioDAO {
 		return crit.list();
 	}
 
+	@Override
+	public List<Funcionario> listar(){
+		Criteria crit = this.session.createCriteria(Funcionario.class);
+		return crit.list();
+	}
 }

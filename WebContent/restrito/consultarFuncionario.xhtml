@@ -8,10 +8,42 @@
 	<ui:define name="content">
 		<h1 class="aw-page-title">Relação de Funcionários</h1>
 		<h:form>
-			<p:toolbarGroup>
-				<p:commandButton value="Cadastrar" action="#{funcionarioBean.novo}"
-					ajax="false" />
-			</p:toolbarGroup>
+			<p:toolbar>
+				<p:toolbarGroup>
+					<p:commandButton value="Cadastrar" action="#{funcionarioBean.novo}"
+						ajax="false" />
+				</p:toolbarGroup>
+			</p:toolbar>
+
+			<p:dataTable id="funcionarios" var="funcionario"
+				style="margin-top:10px" value="#{funcionarioBean.listaFuncionarios}"
+				paginator="true" widgetVar="funcionariosT"
+				emptyMessage="Sem registros de funcionários."
+				currentPageReportTemplate="Mostrando {startRecord}-{endRecord} de {totalRecords} registros."
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,25">
+				<f:facet name="header" >
+					<p:outputLabel value="Funcionários" />
+					<p:inputText id="globalFilter" style="float: right"
+						onkeyup="PF('funcionariosT').filter()" placeholder="Pesquisar" />
+				</f:facet>
+
+				<p:column headerText="Nome" filterBy="#{funcionario.nome}"
+					filterStyle="display:none">
+					<h:outputText value="#{funcionario.nome}" />
+				</p:column>
+
+				<p:column headerText="Email" filterBy="#{funcionario.email}"
+					filterStyle="display:none">
+					<h:outputText value="#{funcionario.email}" />
+				</p:column>
+
+
+				<p:column headerText="Categoria" filterBy="#{funcionario.categoria}"
+					filterStyle="display:none">
+					<h:outputText value="#{funcionario.categoria}" />
+				</p:column>
+			</p:dataTable>
 		</h:form>
 	</ui:define>
 

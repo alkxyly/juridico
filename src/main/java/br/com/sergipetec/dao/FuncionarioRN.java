@@ -25,4 +25,8 @@ private FuncionarioDAO funcionarioDAO;
 	public List<Funcionario> listarGestores(){
 		return this.funcionarioDAO.listarGestores();
 	}
+	
+	public List<Funcionario> listar(){
+		return this.funcionarioDAO.listar();
+	}
 }
