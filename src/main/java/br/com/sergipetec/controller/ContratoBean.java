@@ -35,7 +35,7 @@ public class ContratoBean {
 //		this.contratoSelecionado =  new Contrato();
 	}
 
-	public void salvar(){
+	public String salvar(){
 		ContratoRN contratoRN = new ContratoRN();
 		try {
 			contratoRN.salvar(contrato);
