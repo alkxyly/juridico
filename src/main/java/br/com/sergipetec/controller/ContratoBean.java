@@ -41,10 +41,9 @@ public class ContratoBean {
 			contratoRN.salvar(contrato);
 			contrato =  new Contrato();
 			FacesContext.getCurrentInstance().addMessage("xxx", new FacesMessage("Novo contrato cadastrado com sucesso!"));
-			return "consultarContrato?faces-redirect=true";
 		} catch (Exception e) {
 		}
-
+		return "consultarContrato?faces-redirect=true";
 	}
 
 	public Contrato getContrato() {
