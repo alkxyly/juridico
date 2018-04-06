@@ -3,6 +3,7 @@ package br.com.sergipetec.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -30,6 +31,7 @@ public class Contrato implements Serializable{
 	private Date dataInicio;
 	@Temporal(TemporalType.DATE )
 	private Date dataFim;
+	@Column(length = 2048)
 	private String objeto;
 	private String empresa;
 	private String fonteRecurso;
